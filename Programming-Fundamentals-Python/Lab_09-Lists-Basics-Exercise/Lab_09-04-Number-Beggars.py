@@ -12,5 +12,46 @@
 # meaning that the length of the list is not necessarily a multiple of n.
 # The list length could be even shorter - i.e., the last beggars will take nothing (0).
 
-integers = input()
-n_beggars = int(input())
+# Verzija 1 - koristeci moduo
+
+linija = input()
+beggars = int(input())
+lista = list(map(int, linija.split(", ")))
+sum = [0] * beggars
+brojac = 0
+for broj in lista:
+    sum[brojac%beggars] += broj
+    brojac += 1
+print(sum)
+
+# Verzija 2 - kombinacijom for/if
+
+# linija = input()
+# beggars = int(input())
+# lista = list(map(int, linija.split(", ")))
+# sum = [0] * beggars
+# brojac = 0
+# for broj in lista:
+#     sum[brojac] += broj
+#     brojac += 1
+#     if brojac == beggars:
+#         brojac = 0
+# print(sum)
+
+# Verzija 3 - kombinacijom while/for/if
+
+# linija = input()
+# beggars = int(input())
+# lista = list(map(int, linija.split(", ")))
+# n = 0
+# sum = [0] * beggars
+# flag = True
+# while flag:
+#     for i in range(beggars):
+#         if n < len(lista):
+#             sum[i] = sum[i] + lista[n]
+#             n += 1
+#         else:
+#             flag = False
+#             break
+# print(sum)
