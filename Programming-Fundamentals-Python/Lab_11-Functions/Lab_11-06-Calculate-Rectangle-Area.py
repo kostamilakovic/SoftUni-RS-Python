@@ -11,7 +11,7 @@ print(pravougaonik(a,b))
 
 # Verzija 2 - koristeci funkciju
 
-def pravougaonik(a,b)
+def pravougaonik(a,b):
     return a*b
 a = int(input())
 b = int(input())

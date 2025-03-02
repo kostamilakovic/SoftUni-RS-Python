@@ -20,7 +20,7 @@ lista = list(map(int, linija.split(", ")))
 sum = [0] * beggars
 brojac = 0
 for broj in lista:
-    sum[brojac%beggars] += broj
+    sum[brojac % beggars] += broj
     brojac += 1
 print(sum)
 
